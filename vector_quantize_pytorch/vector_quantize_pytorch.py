@@ -444,7 +444,7 @@ class EuclideanCodebook(nn.Module):
         needs_codebook_dim = x.ndim < 4
         sample_codebook_temp = default(sample_codebook_temp, self.sample_codebook_temp)
 
-        x = x.float()
+        #x = x.float()
 
         if needs_codebook_dim:
             x = rearrange(x, '... -> 1 ...')
